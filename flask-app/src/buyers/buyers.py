@@ -3,13 +3,13 @@ import json
 from src import db
 
 
-sellers = Blueprint('sellers', __name__)
+buyers = Blueprint('buyers', __name__)
 
-# Get all sellers from the DB
-@sellers.route('/sellers', methods=['GET'])
-def get_sellers():
+# Get all buyers from the DB
+@buyers.route('/buyers', methods=['GET'])
+def get_buyers():
     cursor = db.get_db().cursor()
-    cursor.execute('select * from sellers')
+    cursor.execute('select * from buyers')
     row_headers = [x[0] for x in cursor.description]
     json_data = []
     theData = cursor.fetchall()
@@ -21,10 +21,10 @@ def get_sellers():
     return the_response
 
 # Get customer detail for customer with particular userID
-@sellers.route('/sellers/<seller_ID>', methods=['GET'])
+@buyers.route('/buyers/<buyer_ID>', methods=['GET'])
 def get_customer(userID):
     cursor = db.get_db().cursor()
-    cursor.execute('select * from sellers where id = {0}'.format(userID))
+    cursor.execute('select * from buyers where id = {0}'.format(userID))
     row_headers = [x[0] for x in cursor.description]
     json_data = []
     theData = cursor.fetchall()
@@ -35,26 +35,26 @@ def get_customer(userID):
     the_response.mimetype = 'application/json'
     return the_response
 
-# post a new seller into the database
-@sellers.route('/seller', methods=['POST'])
-def post_new_seller():
+# post a new buyer into the database
+@buyers.route('/buyer', methods=['POST'])
+def post_new_buyer():
 
     the_data = request.json
 
-    first = the_data['seller_first']
-    last = the_data['seller_last']
-    email = the_data['seller_email']
-    phone = the_data['seller_phone']
-    street_number = the_data['seller_street_number']
-    address = the_data['seller_address']
-    suffix = the_data['seller_suffix']
-    city = the_data['seller_city']
-    state = the_data['seller_state']
-    postal = the_data['seller_postal']
-    country = the_data['seller_country']
+    first = the_data['buyer_first']
+    last = the_data['buyer_last']
+    email = the_data['buyer_email']
+    phone = the_data['buyer_phone']
+    street_number = the_data['buyer_street_number']
+    address = the_data['buyer_address']
+    suffix = the_data['buyer_suffix']
+    city = the_data['buyer_city']
+    state = the_data['buyer_state']
+    postal = the_data['buyer_postal']
+    country = the_data['buyer_country']
     
     #Constructing the query
-    query = 'insert into sellers (s_first, s_last, s_email, s_phone, street_number, s_address, street_suffix, city, state, postal_code, country) values ("'
+    query = 'insert into buyers (b_first, b_last, b_email, b_phone, street_number, b_address, street_suffix, city, state, postal_code, country) values ("'
     query += first + '","'
     query += last + '","'
     query += email + '","'
@@ -74,22 +74,22 @@ def post_new_seller():
 
     return 'Success!'
 
-# update seller email with particular seller_id
-@sellers.route('/sellers/<seller_id>/email', methods=['PUT'])
-def put_seller_email(seller_id):
+# update buyer email with particular buyer_id
+@buyers.route('/buyers/<buyer_id>/email', methods=['PUT'])
+def put_buyer_email(buyer_id):
     the_data = request.json
 
     cursor = db.get_db().cursor()
-    cursor.execute('update sellers set s_email= {0} where seller_id = {1}'.format(the_data['seller_email'], seller_id))
+    cursor.execute('update buyers set s_email= {0} where buyer_id = {1}'.format(the_data['buyer_email'], buyer_id))
     db.get_db().commit()
     
     
     return 'Success!'
 
-# delete a seller from the database
-@sellers.route('/sellers/<seller_id>', methods=['DELETE'])
-def delete_seller(seller_id):
+# delete a buyer from the database
+@buyers.route('/buyers/<buyer_id>', methods=['DELETE'])
+def delete_buyer(buyer_id):
     cursor = db.get_db().cursor()
-    cursor.execute('delete from sellers where seller_id = {0}'.format(seller_id))
+    cursor.execute('delete from buyers where buyer_id = {0}'.format(buyer_id))
     db.get_db().commit()
     return 'Success!'

@@ -60,7 +60,7 @@ def get_most_pop_products():
     return jsonify(json_data)
 
 # get the products based on team_id from the database
-@products.route('/products/<team_id>', methods=['GET'])
+@products.route('/products/team/<team_id>', methods=['GET'])
 def get_team_products(team_id):
     cursor = db.get_db().cursor()
     cursor.execute('select * from products where team_id = {0}'.format(team_id))
@@ -154,13 +154,5 @@ def put_product_description(product_id):
 def delete_product(product_id):
     cursor = db.get_db().cursor()
     cursor.execute('delete from products where product_id = {0}'.format(product_id))
-    column_headers = [x[0] for x in cursor.description]
-    json_data = []
-    theData = cursor.fetchall()
-    for row in theData:
-        json_data.append(dict(zip(column_headers, row)))
-    the_response = make_response(jsonify(json_data))
-    the_response.status_code = 200
-    the_response.mimetype = 'application/json'
-    return the_response
+    db.get_db().commit()
 
