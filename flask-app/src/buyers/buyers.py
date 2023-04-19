@@ -21,10 +21,10 @@ def get_buyers():
     return the_response
 
 # Get customer detail for customer with particular userID
-@buyers.route('/buyers/<buyer_ID>', methods=['GET'])
-def get_customer(userID):
+@buyers.route('/buyers/<buyer_id>', methods=['GET'])
+def get_customer(buyer_id):
     cursor = db.get_db().cursor()
-    cursor.execute('select * from buyers where id = {0}'.format(userID))
+    cursor.execute('select * from buyers where buyer_id = {0}'.format(buyer_id))
     row_headers = [x[0] for x in cursor.description]
     json_data = []
     theData = cursor.fetchall()
