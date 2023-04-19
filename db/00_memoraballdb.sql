@@ -81,6 +81,7 @@ CREATE TABLE orders (
                     REFERENCES buyers(buyer_id),
     FOREIGN KEY (product_id)
                     REFERENCES products(product_id)
+                    ON DELETE CASCADE
 );
 
 -- table 7

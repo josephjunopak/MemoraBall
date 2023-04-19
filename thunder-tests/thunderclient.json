@@ -40,5 +40,132 @@
     "headers": [],
     "params": [],
     "tests": []
+  },
+  {
+    "_id": "89a39469-da79-4b90-b787-98636f0e89df",
+    "colId": "e82a205a-d98a-47b1-b286-0bebb55798ef",
+    "containerId": "",
+    "name": "GetAllProducts",
+    "url": "localhost:8001/p/products",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2023-04-19T03:04:31.697Z",
+    "modified": "2023-04-19T03:04:43.100Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "125d61a3-7413-4970-a95a-41b29ef2b153",
+    "colId": "e82a205a-d98a-47b1-b286-0bebb55798ef",
+    "containerId": "",
+    "name": "PostNewProduct",
+    "url": "localhost:8001/p/product",
+    "method": "POST",
+    "sortNum": 20000,
+    "created": "2023-04-19T03:22:03.772Z",
+    "modified": "2023-04-19T03:46:58.596Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"product_name\": \"1986 Game Bat\",\n  \"product_price\": 601.99,\n  \"product_team\": 51,\n  \"product_description\": \"Bat used by whole 1986 Yankees Team\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "d8e4a92a-16a6-4c2c-a096-f678b0eff6f9",
+    "colId": "e82a205a-d98a-47b1-b286-0bebb55798ef",
+    "containerId": "",
+    "name": "DeleteProduct (WIP)",
+    "url": "localhost:8001/p/products/5",
+    "method": "DELETE",
+    "sortNum": 30000,
+    "created": "2023-04-19T03:51:53.731Z",
+    "modified": "2023-04-19T03:53:41.300Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "6f6a87d7-658c-4246-a770-150730d6c8eb",
+    "colId": "e82a205a-d98a-47b1-b286-0bebb55798ef",
+    "containerId": "",
+    "name": "PutProductPrice",
+    "url": "localhost:8001/p/products/10/price",
+    "method": "PUT",
+    "sortNum": 40000,
+    "created": "2023-04-19T05:33:34.950Z",
+    "modified": "2023-04-19T06:09:36.330Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"product_price\": 500.00\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "1739d571-dd3c-4868-a625-2c56b32b4c9e",
+    "colId": "e82a205a-d98a-47b1-b286-0bebb55798ef",
+    "containerId": "",
+    "name": "GetSpecificProduct",
+    "url": "localhost:8001/p/products/10",
+    "method": "GET",
+    "sortNum": 50000,
+    "created": "2023-04-19T05:46:44.634Z",
+    "modified": "2023-04-19T05:55:20.370Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "0a59f43d-4ba4-4f53-bdee-c51290a5a8b5",
+    "colId": "e82a205a-d98a-47b1-b286-0bebb55798ef",
+    "containerId": "",
+    "name": "GetTop50Products",
+    "url": "localhost:8001/p/mostExpensive",
+    "method": "GET",
+    "sortNum": 60000,
+    "created": "2023-04-19T06:01:45.696Z",
+    "modified": "2023-04-19T06:02:00.919Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "8adca561-9154-40fd-853a-e154f36ec001",
+    "colId": "e82a205a-d98a-47b1-b286-0bebb55798ef",
+    "containerId": "",
+    "name": "PutProductDescription",
+    "url": "localhost:8001/p/products/10/description",
+    "method": "PUT",
+    "sortNum": 45000,
+    "created": "2023-04-19T06:04:27.977Z",
+    "modified": "2023-04-19T06:09:42.474Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"product_description\": \"2023 Baseball Card of Mike Trout\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "19449fe9-7d64-427b-a19a-55d0bf109aad",
+    "colId": "e82a205a-d98a-47b1-b286-0bebb55798ef",
+    "containerId": "",
+    "name": "GetTeamProducts",
+    "url": "localhost:8001/p/products/50",
+    "method": "GET",
+    "sortNum": 55000,
+    "created": "2023-04-19T06:16:31.060Z",
+    "modified": "2023-04-19T06:16:45.855Z",
+    "headers": [],
+    "params": [],
+    "tests": []
   }
 ]
