@@ -1,5 +1,10 @@
 use MemoraBallDB;
 
+<<<<<<< HEAD
+=======
+SET GLOBAL FOREIGN_KEY_CHECKS=0;
+
+>>>>>>> aaac78fbabd73364d0288fd47c316ca030c6e117
 INSERT INTO sellers(s_first,s_last,s_email,s_phone,street_number,s_address,street_suffix,city,state,postal_code,country,seller_id) VALUES
  ('Gerome','Larmet','glarmet0@pen.io',6782735681,0152,'Mallard','Park','Decatur','Georgia',30089,'United States',1)
 ,('Elbertine','Cereceres','ecereceres1@youtube.com',2489080664,379,'Elmside','Road','Detroit','Michigan',48242,'United States',2)
