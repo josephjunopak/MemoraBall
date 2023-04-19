@@ -1,4 +1,4 @@
-from flask import Blueprint, request, jsonify, make_response
+from flask import Blueprint, request, jsonify, make_response, current_app
 import json
 from src import db
 
@@ -12,7 +12,7 @@ def get_products():
     cursor = db.get_db().cursor()
 
     # use cursor to query the database for a list of products
-    cursor.execute('SELECT id, product_code, product_name, list_price FROM products')
+    cursor.execute('SELECT product_name, unit_price, team_id, description, product_id FROM products')
 
     # grab the column headers from the returned data
     column_headers = [x[0] for x in cursor.description]
@@ -58,3 +58,13 @@ def get_most_pop_products():
         json_data.append(dict(zip(column_headers, row)))
 
     return jsonify(json_data)
+
+# post a new product into the database
+@products.route('/product', methods=['POST'])
+def add_new_product():
+
+    the_data = request.json
+    current_app.logger.info(the_data)
+
+    return 'Success!'
+
