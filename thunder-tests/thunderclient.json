@@ -79,11 +79,11 @@
     "colId": "e82a205a-d98a-47b1-b286-0bebb55798ef",
     "containerId": "",
     "name": "DeleteProduct (WIP)",
-    "url": "localhost:8001/p/products/5",
+    "url": "localhost:8001/p/products/6",
     "method": "DELETE",
     "sortNum": 30000,
     "created": "2023-04-19T03:51:53.731Z",
-    "modified": "2023-04-19T03:53:41.300Z",
+    "modified": "2023-04-19T22:16:08.278Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -116,7 +116,7 @@
     "method": "GET",
     "sortNum": 50000,
     "created": "2023-04-19T05:46:44.634Z",
-    "modified": "2023-04-19T05:55:20.370Z",
+    "modified": "2023-04-19T22:16:21.168Z",
     "headers": [],
     "params": [],
     "tests": []

@@ -1,6 +1,7 @@
 CREATE DATABASE MemoraBallDB;
 USE MemoraBallDB;
 
+SET GLOBAL FOREIGN_KEY_CHECKS=0;
 -- table 1
 CREATE TABLE sellers (
   s_first varchar(50) NOT NULL,

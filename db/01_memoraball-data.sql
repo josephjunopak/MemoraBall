@@ -1,3 +1,7 @@
+use MemoraBallDB;
+
+SET GLOBAL FOREIGN_KEY_CHECKS=0;
+
 INSERT INTO sellers(s_first,s_last,s_email,s_phone,street_number,s_address,street_suffix,city,state,postal_code,country,seller_id) VALUES
  ('Gerome','Larmet','glarmet0@pen.io',6782735681,0152,'Mallard','Park','Decatur','Georgia',30089,'United States',1)
 ,('Elbertine','Cereceres','ecereceres1@youtube.com',2489080664,379,'Elmside','Road','Detroit','Michigan',48242,'United States',2)
@@ -716,7 +720,7 @@ INSERT INTO shipping(shipper_id,order_id,shipping_id) VALUES
 ,(18,16,99)
 ,(74,43,100);
 
-INSERT INTO ReturnDetails(order_id,return_id) VALUES
+INSERT INTO returndetails(order_id,return_id) VALUES
  (17,1)
 ,(32,2)
 ,(93,3)

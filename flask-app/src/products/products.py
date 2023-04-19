@@ -156,3 +156,5 @@ def delete_product(product_id):
     cursor.execute('delete from products where product_id = {0}'.format(product_id))
     db.get_db().commit()
 
+    return 'Success!'
+
