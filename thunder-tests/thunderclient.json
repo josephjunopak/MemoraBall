@@ -78,7 +78,7 @@
     "_id": "d8e4a92a-16a6-4c2c-a096-f678b0eff6f9",
     "colId": "e82a205a-d98a-47b1-b286-0bebb55798ef",
     "containerId": "",
-    "name": "DeleteProduct (WIP)",
+    "name": "DeleteProduct",
     "url": "localhost:8001/p/products/6",
     "method": "DELETE",
     "sortNum": 30000,
@@ -362,6 +362,214 @@
     "body": {
       "type": "json",
       "raw": "{\n  \"buyer_first\": \"Joshua\",\n  \"buyer_last\": \"Smith\",\n  \"buyer_email\": \"joshsmith123@gmail.com\",\n  \"buyer_phone\": \"1234567890\",\n  \"buyer_street_number\": 54,\n  \"buyer_address\": \"Lakeville\",\n  \"buyer_suffix\": \"Road\",\n  \"buyer_city\" : \"Boston\",\n  \"buyer_state\" : \"Massachussetts\",\n  \"buyer_postal\": \"02119\",\n  \"buyer_country\": \"USA\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "8a5e907d-a1b7-4f83-b1c6-53310b76b959",
+    "colId": "077db029-1857-4694-a1d4-972db5cc5298",
+    "containerId": "",
+    "name": "DeleteBuyer",
+    "url": "localhost:8001/b/buyers/60",
+    "method": "DELETE",
+    "sortNum": 40000,
+    "created": "2023-04-20T00:14:36.107Z",
+    "modified": "2023-04-20T00:15:22.546Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "5c9e945f-a600-4f8d-a3b1-06565a197e91",
+    "colId": "077db029-1857-4694-a1d4-972db5cc5298",
+    "containerId": "",
+    "name": "PostNewBuyer (2nd test)",
+    "url": "localhost:8001/b/buyer",
+    "method": "POST",
+    "sortNum": 35000,
+    "created": "2023-04-20T00:15:28.061Z",
+    "modified": "2023-04-20T00:16:35.105Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"buyer_first\": \"Bobby\",\n  \"buyer_last\": \"Lee\",\n  \"buyer_email\": \"bobxlee157@aol.com\",\n  \"buyer_phone\": \"4561324321\",\n  \"buyer_street_number\": 230,\n  \"buyer_address\": \"Thorn\",\n  \"buyer_suffix\": \"Street\",\n  \"buyer_city\" : \"Roslyn\",\n  \"buyer_state\" : \"New York\",\n  \"buyer_postal\": \"11577\",\n  \"buyer_country\": \"USA\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "011331e6-00be-43d1-8bd4-86dd24ba1b16",
+    "colId": "077db029-1857-4694-a1d4-972db5cc5298",
+    "containerId": "",
+    "name": "PutBuyerEmail (2nd Test)",
+    "url": "localhost:8001/b/buyers/15/email",
+    "method": "PUT",
+    "sortNum": 15000,
+    "created": "2023-04-20T00:16:39.627Z",
+    "modified": "2023-04-20T00:16:59.455Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"buyer_email\": \"choopachoop@yahoo.com\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "42e9453d-6f58-4a7a-912c-3a4cf4f93f6c",
+    "colId": "077db029-1857-4694-a1d4-972db5cc5298",
+    "containerId": "",
+    "name": "PostNewBuyer (3rd test)",
+    "url": "localhost:8001/b/buyer",
+    "method": "POST",
+    "sortNum": 37500,
+    "created": "2023-04-20T00:17:38.233Z",
+    "modified": "2023-04-20T00:19:15.249Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"buyer_first\": \"Richard\",\n  \"buyer_last\": \"Goldstein\",\n  \"buyer_email\": \"richiegold@tewark.com\",\n  \"buyer_phone\": \"9589480697\",\n  \"buyer_street_number\": 1111,\n  \"buyer_address\": \"Yelp\",\n  \"buyer_suffix\": \"Lane\",\n  \"buyer_city\" : \"Jasper\",\n  \"buyer_state\" : \"Texas\",\n  \"buyer_postal\": \"75951\",\n  \"buyer_country\": \"USA\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "5d6e6d63-0a87-4ed9-a21d-e919b2a7da02",
+    "colId": "f059db4c-1c1f-44d7-94de-095246bb1316",
+    "containerId": "",
+    "name": "PutSellerEmail",
+    "url": "localhost:8001/s/sellers/15/email",
+    "method": "PUT",
+    "sortNum": 10000,
+    "created": "2023-04-20T00:19:33.161Z",
+    "modified": "2023-04-20T00:20:04.062Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"seller_email\": \"qwe567@gmail.com\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "690e8c41-29d4-49c8-afa8-d29d50563ee2",
+    "colId": "f059db4c-1c1f-44d7-94de-095246bb1316",
+    "containerId": "",
+    "name": "PutSellerEmail (2nd Test)",
+    "url": "localhost:8001/s/sellers/15/email",
+    "method": "PUT",
+    "sortNum": 15000,
+    "created": "2023-04-20T00:19:33.163Z",
+    "modified": "2023-04-20T00:22:41.782Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"seller_email\": \"goteeem@verizon.net\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "5058af54-c78b-4f69-af45-bb8de65cb6b4",
+    "colId": "f059db4c-1c1f-44d7-94de-095246bb1316",
+    "containerId": "",
+    "name": "GetAllSellers",
+    "url": "localhost:8001/s/sellers",
+    "method": "GET",
+    "sortNum": 20000,
+    "created": "2023-04-20T00:19:33.164Z",
+    "modified": "2023-04-20T00:22:52.550Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "8b721c52-962d-4ec2-b573-e01df7a92c3b",
+    "colId": "f059db4c-1c1f-44d7-94de-095246bb1316",
+    "containerId": "",
+    "name": "GetSpecificSeller",
+    "url": "localhost:8001/s/sellers/10",
+    "method": "GET",
+    "sortNum": 30000,
+    "created": "2023-04-20T00:19:33.165Z",
+    "modified": "2023-04-20T00:23:03.319Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "6eb6fc5f-eeb4-461f-a55c-0247ea79fa10",
+    "colId": "f059db4c-1c1f-44d7-94de-095246bb1316",
+    "containerId": "",
+    "name": "PostNewSeller",
+    "url": "localhost:8001/s/seller",
+    "method": "POST",
+    "sortNum": 30000,
+    "created": "2023-04-20T00:19:33.166Z",
+    "modified": "2023-04-20T00:25:38.526Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"seller_first\": \"Sharon\",\n  \"seller_last\": \"Copperfield\",\n  \"seller_email\": \"sharoncopps@gmail.com\",\n  \"seller_phone\": \"9078263317\",\n  \"seller_street_number\": 245,\n  \"seller_address\": \"Cold Storage\",\n  \"seller_suffix\": \"Road\",\n  \"seller_city\" : \"Craig\",\n  \"seller_state\" : \"Alaska\",\n  \"seller_postal\": \"99921\",\n  \"seller_country\": \"USA\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "6918ba76-067c-4445-8cd7-5e68c7fdbac1",
+    "colId": "f059db4c-1c1f-44d7-94de-095246bb1316",
+    "containerId": "",
+    "name": "DeleteBuyer",
+    "url": "localhost:8001/s/sellers/60",
+    "method": "DELETE",
+    "sortNum": 40000,
+    "created": "2023-04-20T00:19:33.169Z",
+    "modified": "2023-04-20T00:27:13.981Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "a1656630-cd83-4b0f-ad23-3d912a0ca857",
+    "colId": "f059db4c-1c1f-44d7-94de-095246bb1316",
+    "containerId": "",
+    "name": "PostNewSeller (2nd test)",
+    "url": "localhost:8001/s/seller",
+    "method": "POST",
+    "sortNum": 33750,
+    "created": "2023-04-20T00:25:53.761Z",
+    "modified": "2023-04-20T00:26:56.077Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"seller_first\": \"Andrew\",\n  \"seller_last\": \"Jin\",\n  \"seller_email\": \"drewjin@yahoo.com\",\n  \"seller_phone\": \"8507292412\",\n  \"seller_street_number\": 355,\n  \"seller_address\": \"Leon Ward\",\n  \"seller_suffix\": \"Road\",\n  \"seller_city\" : \"Perry\",\n  \"seller_state\" : \"Florida\",\n  \"seller_postal\": \"32347\",\n  \"seller_country\": \"USA\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "b7212247-a6d8-4f34-b644-5e8e61f17987",
+    "colId": "f059db4c-1c1f-44d7-94de-095246bb1316",
+    "containerId": "",
+    "name": "PostNewSeller (3rd test)",
+    "url": "localhost:8001/s/seller",
+    "method": "POST",
+    "sortNum": 36875,
+    "created": "2023-04-20T00:29:27.016Z",
+    "modified": "2023-04-20T00:30:49.902Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"seller_first\": \"Ian\",\n  \"seller_last\": \"Buyeda\",\n  \"seller_email\": \"ianianian@aol.com\",\n  \"seller_phone\": \"4214690001\",\n  \"seller_street_number\": 420,\n  \"seller_address\": \"Johnson\",\n  \"seller_suffix\": \"Street\",\n  \"seller_city\" : \"Midland\",\n  \"seller_state\" : \"Arkansas\",\n  \"seller_postal\": \"32140\",\n  \"seller_country\": \"USA\"\n}",
       "form": []
     },
     "tests": []

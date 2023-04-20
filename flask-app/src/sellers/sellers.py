@@ -20,11 +20,11 @@ def get_sellers():
     the_response.mimetype = 'application/json'
     return the_response
 
-# Get customer detail for customer with particular userID
-@sellers.route('/sellers/<seller_ID>', methods=['GET'])
-def get_customer(userID):
+# Get customer detail for customer with particular seller_ID
+@sellers.route('/sellers/<seller_id>', methods=['GET'])
+def get_customer(seller_id):
     cursor = db.get_db().cursor()
-    cursor.execute('select * from sellers where id = {0}'.format(userID))
+    cursor.execute('select * from sellers where seller_id = {0}'.format(seller_id))
     row_headers = [x[0] for x in cursor.description]
     json_data = []
     theData = cursor.fetchall()
@@ -80,7 +80,7 @@ def put_seller_email(seller_id):
     the_data = request.json
 
     cursor = db.get_db().cursor()
-    cursor.execute('update sellers set s_email= {0} where seller_id = {1}'.format(the_data['seller_email'], seller_id))
+    cursor.execute('update sellers set s_email= "{0}" where seller_id = {1}'.format(the_data['seller_email'], seller_id))
     db.get_db().commit()
     
     
