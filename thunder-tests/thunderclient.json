@@ -299,5 +299,71 @@
     "headers": [],
     "params": [],
     "tests": []
+  },
+  {
+    "_id": "24d97bb7-d18a-419a-bc48-ef8454a57c19",
+    "colId": "077db029-1857-4694-a1d4-972db5cc5298",
+    "containerId": "",
+    "name": "PutBuyerEmail",
+    "url": "localhost:8001/b/buyers/11/email",
+    "method": "PUT",
+    "sortNum": 10000,
+    "created": "2023-04-19T23:58:35.881Z",
+    "modified": "2023-04-20T00:02:11.798Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"buyer_email\": \"abc123@gmail.com\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "d699396c-7ad8-4c6f-a2fe-f63993979923",
+    "colId": "077db029-1857-4694-a1d4-972db5cc5298",
+    "containerId": "",
+    "name": "GetAllBuyers",
+    "url": "localhost:8001/b/buyers",
+    "method": "GET",
+    "sortNum": 20000,
+    "created": "2023-04-20T00:02:58.245Z",
+    "modified": "2023-04-20T00:03:11.431Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "2dbbed20-cf20-40c3-84e6-0fdbcab8f46b",
+    "colId": "077db029-1857-4694-a1d4-972db5cc5298",
+    "containerId": "",
+    "name": "GetSpecificBuyer",
+    "url": "localhost:8001/b/buyers/10",
+    "method": "GET",
+    "sortNum": 30000,
+    "created": "2023-04-20T00:03:15.483Z",
+    "modified": "2023-04-20T00:03:44.530Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "7ebd58e6-2ae8-44fe-8fb6-991538db2a31",
+    "colId": "077db029-1857-4694-a1d4-972db5cc5298",
+    "containerId": "",
+    "name": "PostNewBuyer",
+    "url": "localhost:8001/b/buyer",
+    "method": "POST",
+    "sortNum": 30000,
+    "created": "2023-04-20T00:03:59.331Z",
+    "modified": "2023-04-20T00:10:07.475Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"buyer_first\": \"Joshua\",\n  \"buyer_last\": \"Smith\",\n  \"buyer_email\": \"joshsmith123@gmail.com\",\n  \"buyer_phone\": \"1234567890\",\n  \"buyer_street_number\": 54,\n  \"buyer_address\": \"Lakeville\",\n  \"buyer_suffix\": \"Road\",\n  \"buyer_city\" : \"Boston\",\n  \"buyer_state\" : \"Massachussetts\",\n  \"buyer_postal\": \"02119\",\n  \"buyer_country\": \"USA\"\n}",
+      "form": []
+    },
+    "tests": []
   }
 ]

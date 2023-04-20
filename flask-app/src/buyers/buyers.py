@@ -20,7 +20,7 @@ def get_buyers():
     the_response.mimetype = 'application/json'
     return the_response
 
-# Get customer detail for customer with particular userID
+# Get customer detail for customer with particular buyer_ID
 @buyers.route('/buyers/<buyer_id>', methods=['GET'])
 def get_customer(buyer_id):
     cursor = db.get_db().cursor()
@@ -80,7 +80,7 @@ def put_buyer_email(buyer_id):
     the_data = request.json
 
     cursor = db.get_db().cursor()
-    cursor.execute('update buyers set s_email= {0} where buyer_id = {1}'.format(the_data['buyer_email'], buyer_id))
+    cursor.execute('update buyers set b_email= "{0}" where buyer_id = {1}'.format(the_data['buyer_email'], buyer_id))
     db.get_db().commit()
     
     
