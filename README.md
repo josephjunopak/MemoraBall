@@ -1,6 +1,6 @@
 ## MemoraBall
 
-##Overview
+Overview
 MemoraBall is an online marketplace where sellers can sell their sports memorabilia to buyers. When a buyer makes a purchase from a seller, the listed product gets sent to the nearest MemoraBall warehouse, where an authenticator examines the product. It is the easiest way for collectors to profit off of their collection and passionate fans to get their hands on rare items without worrying about the legitimacy of the item.
 
 3 Main Blueprints
