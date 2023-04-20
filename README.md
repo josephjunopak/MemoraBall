@@ -44,5 +44,5 @@ Products (8 Routes):
 1. Start the containers with `docker compose up`.  To run in detached mode, run `docker compose up -d`. 
 
 
-
+LINK TO VIDEO: https://youtu.be/XLe2FVxuctE 
 
